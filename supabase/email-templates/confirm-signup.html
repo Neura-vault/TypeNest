@@ -1,0 +1,30 @@
+<!--
+  TypeNest — Confirm Signup Email Template
+  Paste this into: Supabase Dashboard → Authentication → Email Templates → "Confirm signup"
+  {{ .ConfirmationURL }} is a real Supabase template variable — do not remove it.
+-->
+<div style="background:#F7F9FC; padding:40px 20px; font-family:'Segoe UI',Arial,sans-serif;">
+  <div style="max-width:480px; margin:0 auto; background:#FFFFFF; border-radius:16px; overflow:hidden; border:1px solid #E3E9F2;">
+    <div style="background:linear-gradient(135deg,#1E6FEF,#0B4FCB); padding:28px 32px;">
+      <span style="font-size:22px; font-weight:700; color:#FFFFFF; letter-spacing:-0.02em;">TypeNest</span>
+    </div>
+    <div style="padding:32px;">
+      <h1 style="font-size:20px; color:#0B1B33; margin:0 0 12px;">Confirm your email</h1>
+      <p style="font-size:14.5px; color:#5B6B82; line-height:1.6; margin:0 0 24px;">
+        Welcome to TypeNest — the platform that helps you type faster and think sharper.
+        Click the button below to activate your account and start your first test.
+      </p>
+      <a href="{{ .ConfirmationURL }}"
+         style="display:inline-block; background:linear-gradient(135deg,#FF8A1E,#E85B00); color:#FFFFFF;
+                text-decoration:none; font-weight:700; font-size:14.5px; padding:13px 28px; border-radius:12px;">
+        Confirm Email &amp; Start Typing
+      </a>
+      <p style="font-size:12.5px; color:#5B6B82; line-height:1.6; margin:24px 0 0;">
+        If you didn't create a TypeNest account, you can safely ignore this email.
+      </p>
+    </div>
+    <div style="padding:18px 32px; border-top:1px solid #E3E9F2;">
+      <p style="font-size:11.5px; color:#8B98AC; margin:0;">© TypeNest — Don't just test your typing. Build it.</p>
+    </div>
+  </div>
+</div>

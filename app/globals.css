@@ -1,0 +1,302 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand */
+  --blue-500: #1e6fef;
+  --blue-700: #0b4fcb;
+  --amber-500: #ff8a1e;
+  --amber-700: #e85b00;
+  --brand-grad: linear-gradient(135deg, var(--blue-500), var(--blue-700));
+  --amber-grad: linear-gradient(135deg, var(--amber-500), var(--amber-700));
+  --hero-grad: linear-gradient(135deg, var(--blue-500) 0%, #6a4bf5 55%, var(--amber-500) 100%);
+
+  /* Extended accent palette — used for icon tiles, badges, skill trees,
+     achievement colors, etc. so the app doesn't read as two-tone. */
+  --violet-500: #7c5cf0;
+  --violet-700: #5a3adb;
+  --teal-500: #15b895;
+  --teal-700: #0c8f74;
+  --rose-500: #f0568c;
+  --rose-700: #d63870;
+  --red-500: #e24b4b;
+  --green-500: #1fa463;
+
+  --bg: #f5f7fc;
+  --surface: #ffffff;
+  --surface-2: #eef2f9;
+  --surface-3: #e4e9f4;
+  --border: #e3e9f2;
+  --text: #0b1b33;
+  --text-dim: #5b6b82;
+
+  --shadow: 0 2px 4px rgba(11, 27, 51, 0.05), 0 14px 34px rgba(11, 27, 51, 0.08);
+  --shadow-rest: 0 1px 2px rgba(11, 27, 51, 0.035), 0 4px 16px rgba(11, 27, 51, 0.05);
+  --shadow-glow-blue: 0 10px 28px rgba(30, 111, 239, 0.22);
+  --shadow-glow-amber: 0 10px 28px rgba(255, 138, 30, 0.28);
+
+  --radius: 16px;
+  --radius-lg: 22px;
+  --dur: 220ms;
+
+  --font-heading: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+[data-theme="midnight"] {
+  --bg: #060810;
+  --surface: #0d1220;
+  --surface-2: #121a2c;
+  --surface-3: #182236;
+  --border: #1e293f;
+  --text: #eaf0fb;
+  --text-dim: #8b98ac;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.4), 0 16px 40px rgba(0, 0, 0, 0.55);
+  --shadow-rest: 0 1px 2px rgba(0, 0, 0, 0.3), 0 3px 14px rgba(0, 0, 0, 0.4);
+  --shadow-glow-blue: 0 10px 30px rgba(30, 111, 239, 0.28);
+  --shadow-glow-amber: 0 10px 30px rgba(255, 138, 30, 0.22);
+}
+
+[data-theme="cyber"] {
+  --bg: #0a0a18;
+  --surface: #12122c;
+  --surface-2: #171736;
+  --surface-3: #1e1e44;
+  --border: #2a2a55;
+  --text: #edebff;
+  --text-dim: #9c9ad1;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.4), 0 0 40px rgba(124, 92, 240, 0.2);
+  --shadow-rest: 0 1px 2px rgba(0, 0, 0, 0.3), 0 3px 16px rgba(124, 92, 240, 0.12);
+  --shadow-glow-blue: 0 0 32px rgba(30, 111, 239, 0.35);
+  --shadow-glow-amber: 0 0 32px rgba(255, 138, 30, 0.3);
+}
+
+[data-theme="ocean"] {
+  --bg: #f0f9fb;
+  --surface: #ffffff;
+  --surface-2: #e3f4f7;
+  --surface-3: #cfeaf0;
+  --border: #d3ecf1;
+  --text: #0c2e33;
+  --text-dim: #4d7a82;
+  --blue-500: #0891b2;
+  --blue-700: #0e7490;
+  --amber-500: #14b8a6;
+  --amber-700: #0d9488;
+  --brand-grad: linear-gradient(135deg, #0891b2, #0e7490);
+  --amber-grad: linear-gradient(135deg, #14b8a6, #0d9488);
+  --hero-grad: linear-gradient(135deg, #0891b2 0%, #14b8a6 55%, #38bdf8 100%);
+}
+
+[data-theme="forest"] {
+  --bg: #f3f8f3;
+  --surface: #ffffff;
+  --surface-2: #e7f2e7;
+  --surface-3: #d5e9d5;
+  --border: #dcedd7;
+  --text: #14291a;
+  --text-dim: #4f6b55;
+  --blue-500: #2f9e44;
+  --blue-700: #237a34;
+  --amber-500: #eab308;
+  --amber-700: #ca8a04;
+  --brand-grad: linear-gradient(135deg, #2f9e44, #237a34);
+  --amber-grad: linear-gradient(135deg, #eab308, #ca8a04);
+  --hero-grad: linear-gradient(135deg, #2f9e44 0%, #84cc16 55%, #eab308 100%);
+}
+
+[data-theme="sunset"] {
+  --bg: #fff6f0;
+  --surface: #ffffff;
+  --surface-2: #ffe9dc;
+  --surface-3: #ffdbc4;
+  --border: #ffe0cc;
+  --text: #3a1a0f;
+  --text-dim: #8a5a42;
+  --blue-500: #f0568c;
+  --blue-700: #d63870;
+  --amber-500: #ff8a1e;
+  --amber-700: #e85b00;
+  --brand-grad: linear-gradient(135deg, #f0568c, #d63870);
+  --amber-grad: linear-gradient(135deg, #ff8a1e, #e85b00);
+  --hero-grad: linear-gradient(135deg, #f0568c 0%, #ff8a1e 55%, #ffc83d 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: var(--user-font-size, 16px);
+  -webkit-font-smoothing: antialiased;
+  transition: background var(--dur), color var(--dur);
+}
+
+/* Focus mode (user_settings.focus_mode): dims the sidebar/top bar so the
+   typing area is the only thing that really draws the eye — full chrome
+   returns on hover, nothing is actually removed from the DOM. */
+.focus-mode > aside,
+.focus-mode > div > header {
+  opacity: 0.12;
+  transition: opacity 200ms;
+}
+.focus-mode > aside:hover,
+.focus-mode > div > header:hover {
+  opacity: 1;
+}
+
+h1, h2, h3, .font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: -0.01em;
+}
+
+.reduced-motion * {
+  animation-duration: 0.001ms !important;
+  transition-duration: 0.001ms !important;
+}
+
+/* Slim, unobtrusive scrollbar — matches the premium feel everywhere,
+   including the sidebar and modal scroll areas. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--surface-3) transparent;
+}
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+  background: var(--surface-3);
+  border-radius: 8px;
+}
+*::-webkit-scrollbar-thumb:hover { background: var(--border); }
+
+/* Shared card look used across the whole app — kept here as a plain class
+   so both server and client components can use it without prop drilling. */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-rest);
+  transition: box-shadow var(--dur), transform var(--dur), border-color var(--dur);
+}
+
+/* Frosted-glass variant for hero panels / overlays on top of gradients. */
+.glass {
+  background: color-mix(in srgb, var(--surface) 72%, transparent);
+  border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* Soft radial "mesh" glow used behind hero/landing sections, echoing the
+   gradient-blob illustrations in the design references. Purely decorative
+   — sits behind content via negative z-index and never intercepts clicks. */
+.mesh-glow {
+  position: absolute;
+  inset: -10% -10% auto -10%;
+  height: 620px;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(600px 320px at 12% 15%, rgba(30, 111, 239, 0.16), transparent 60%),
+    radial-gradient(500px 300px at 85% 10%, rgba(255, 138, 30, 0.14), transparent 60%),
+    radial-gradient(450px 260px at 55% 40%, rgba(124, 92, 240, 0.1), transparent 60%);
+  filter: blur(10px);
+}
+
+/* Colorful rounded icon badge — the "app tile" look used for modes,
+   achievements, mission rewards, academy nodes, etc. Pass a --tile-color
+   custom property (or use the .tile-* helpers below) to theme it. */
+.icon-tile {
+  --tile-color: var(--blue-500);
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--tile-color);
+  background: color-mix(in srgb, var(--tile-color) 14%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--tile-color) 22%, transparent);
+}
+.icon-tile.lg { width: 56px; height: 56px; border-radius: 16px; font-size: 24px; }
+.icon-tile.solid {
+  color: #fff;
+  background: linear-gradient(135deg, var(--tile-color), color-mix(in srgb, var(--tile-color) 60%, black));
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--tile-color) 40%, transparent);
+}
+
+.tile-blue   { --tile-color: var(--blue-500); }
+.tile-amber  { --tile-color: var(--amber-500); }
+.tile-violet { --tile-color: var(--violet-500); }
+.tile-teal   { --tile-color: var(--teal-500); }
+.tile-rose   { --tile-color: var(--rose-500); }
+.tile-green  { --tile-color: var(--green-500); }
+.tile-red    { --tile-color: var(--red-500); }
+
+/* Small pill/badge — status labels, "New", level chips, etc. */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+}
+
+.hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.btn-primary {
+  background: var(--amber-grad);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(255, 138, 30, 0.32);
+  transition: box-shadow var(--dur), transform var(--dur);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 10px 26px rgba(255, 138, 30, 0.48);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: var(--brand-grad);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(30, 111, 239, 0.32);
+  transition: box-shadow var(--dur), transform var(--dur);
+}
+
+.btn-secondary:hover {
+  box-shadow: 0 10px 26px rgba(30, 111, 239, 0.45);
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  transition: border-color var(--dur), color var(--dur), background var(--dur);
+}
+
+.btn-ghost:hover {
+  border-color: var(--blue-500);
+  color: var(--blue-500);
+  background: color-mix(in srgb, var(--blue-500) 6%, transparent);
+}
