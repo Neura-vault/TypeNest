@@ -1,0 +1,31 @@
+# Supabase CLI project config. This is what makes `supabase link`,
+# `supabase db push`, `supabase db pull` and `supabase migration list` work
+# against this repo instead of only being able to paste SQL into the
+# dashboard by hand — which is also the only way to see a diff between
+# what's in supabase/migrations/ and what's actually live, or to roll a
+# migration back.
+#
+# One-time setup:
+#   npx supabase login
+#   npx supabase link --project-ref <your-project-ref>   # find this in the Supabase dashboard URL
+#
+# Day to day:
+#   npx supabase db push          # apply any migrations not yet run on the linked project
+#   npx supabase migration list   # compare local migration files against what's applied remotely
+#   npx supabase db diff          # see what would change before pushing
+#
+# project_id is just a local label for the CLI's config cache — it does not
+# need to match your real Supabase project ref.
+project_id = "typenest"
+
+[db]
+port = 54322
+major_version = 15
+
+[api]
+enabled = true
+port = 54321
+
+[studio]
+enabled = true
+port = 54323
